@@ -1,0 +1,745 @@
+# The Anti-Slop Spec: A Comprehensive Guide to Not Writing Like AI
+
+## What This Document Is
+
+This is an exhaustive reference for identifying and eliminating the patterns, words, phrases, structures, and tonal habits that make AI-generated writing instantly recognizable. It draws on academic research, AI detection science, Wikipedia editor field guides, professional editor observations, and extensive community analysis.
+
+Use this as a banned-list, a style guide, and a diagnostic tool.
+
+---
+
+## Table of Contents
+
+1. [Why AI Writes the Way It Does](#1-why-ai-writes-the-way-it-does)
+2. [Banned Words](#2-banned-words)
+3. [Banned Phrases](#3-banned-phrases)
+4. [Banned Structural Patterns](#4-banned-structural-patterns)
+5. [Banned Tone and Voice Patterns](#5-banned-tone-and-voice-patterns)
+6. [Banned Rhetorical Patterns](#6-banned-rhetorical-patterns)
+7. [Banned Punctuation and Formatting Habits](#7-banned-punctuation-and-formatting-habits)
+8. [Genre-Specific Tells](#8-genre-specific-tells)
+9. [What to Do Instead](#9-what-to-do-instead)
+10. [Detection Science: What the Tools Measure](#10-detection-science-what-the-tools-measure)
+11. [Sources](#11-sources)
+
+---
+
+## 1. Why AI Writes the Way It Does
+
+Before the lists, understand the root causes. Every pattern in this document traces back to one or more of these seven mechanisms:
+
+**Next-token prediction.** Language models predict the most probable next word given context. This produces text that is locally coherent but globally directionless -- the model knows the next word but not the destination. The result: low perplexity (too predictable), low burstiness (too uniform), and what researchers call the "treadmill effect" -- motion without displacement through the material.
+
+**RLHF training (Reinforcement Learning from Human Feedback).** Models are rewarded when users click thumbs-up. This creates sycophancy, hedging, the "both sides" rhetoric, and forced neutrality. The model learned that lists earn higher ratings, that agreeable responses get more thumbs-ups, and that covering every angle feels "helpful." OpenAI had to roll back a GPT-4o update in April 2025 after it became so sycophantic it endorsed plans to sell "shit on a stick" and affirmed a user's decision to stop medication.
+
+**Statistical averaging.** The model generates the most probable tokens given context, which are by definition the most generic, common, and broadly applicable options. Specificity, personality, and originality all live in the statistical tails -- exactly where the model won't go. Researchers call this "semantic ablation": the systematic erosion of high-entropy (unique, precise) information in favor of low-entropy (generic, safe) tokens.
+
+**Safety training.** Models are trained to avoid anything offensive, controversial, or emotionally charged. This creates bland, corporate-safe vocabulary and a "harmless filter" that strips out jagged, cynical, or provocative language.
+
+**Training on instructional text.** The training data is saturated with textbooks, tutorials, corporate explainers, and student essays. The model absorbed textbook argumentation patterns and deploys them with mechanical consistency.
+
+**Lack of embodiment.** The model has never seen, touched, tasted, or experienced anything. It cannot produce genuine sensory details, personal anecdotes, or observations grounded in lived experience. Its descriptions are assembled from statistical associations, not perception.
+
+**Lack of metacognition.** The model cannot reflect on whether its writing actually communicates, whether a leap in logic was too large, or whether the reader already knows what is being explained. It produces "cosmetically improved" prose but cannot identify that a paragraph failed to state its real point.
+
+---
+
+## 2. Banned Words
+
+These words appear at dramatically elevated frequencies in AI text. A 2024 study of 15 million PubMed abstracts found "delve" had the highest excess-frequency Z-score after ChatGPT's release. GPTZero data from 3.3 million texts shows some AI-favored terms appear 100-200x more often in AI text than human text.
+
+### Kill-on-Sight Words (The Worst Offenders)
+
+These are the most universally cited, most instantly recognizable AI tells. Never use them:
+
+| Word                      | Why It's Flagged                                                                                                                                                                     |
+| ------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
+| delve                     | The single most cited AI word across all sources. FSU research paper dedicated to studying why ChatGPT overuses it. Readers react "much more negatively" to it than other buzzwords. |
+| tapestry                  | A Forbes editor said: "If the word 'tapestry' appears, it was generated by ChatGPT." Appears in 8% of AI creative writing outputs.                                                   |
+| landscape                 | Generic metaphor AI uses for any domain or field.                                                                                                                                    |
+| realm                     | Same problem as "landscape" -- vague domain-substitute.                                                                                                                              |
+| nuanced                   | AI's favorite way to describe anything it can't actually analyze with nuance.                                                                                                        |
+| multifaceted              | See "nuanced."                                                                                                                                                                       |
+| comprehensive             | AI describing its own thoroughness.                                                                                                                                                  |
+| robust                    | Meaningless corporate modifier.                                                                                                                                                      |
+| crucial                   | AI's go-to importance marker.                                                                                                                                                        |
+| pivotal                   | See "crucial."                                                                                                                                                                       |
+| leverage (verb)           | Corporate jargon default.                                                                                                                                                            |
+| foster                    | AI's favorite verb for any kind of encouragement or growth.                                                                                                                          |
+| seamless / seamlessly     | Nothing is ever seamless.                                                                                                                                                            |
+| intricate                 | AI's substitute for actually describing complexity.                                                                                                                                  |
+| innovative                | Empty marketing adjective.                                                                                                                                                           |
+| transformative            | See "innovative."                                                                                                                                                                    |
+| meticulous / meticulously | AI virtue-signaling about care and precision.                                                                                                                                        |
+| navigate                  | AI's metaphor for doing anything in any domain.                                                                                                                                      |
+| underscore                | AI's verb for "emphasize" -- spiked in academic papers post-ChatGPT.                                                                                                                 |
+| showcase / showcasing     | 20x more frequent in AI text per GPTZero.                                                                                                                                            |
+| embark                    | AI's verb for starting anything.                                                                                                                                                     |
+| beacon                    | AI's metaphor for anything positive or guiding.                                                                                                                                      |
+| cornerstone               | AI's metaphor for anything foundational.                                                                                                                                             |
+| moreover                  | The most recognizable AI transition word.                                                                                                                                            |
+| furthermore               | See "moreover."                                                                                                                                                                      |
+
+### Extended Banned Verbs
+
+| Category             | Words                                                    |
+| -------------------- | -------------------------------------------------------- |
+| "Explore" synonyms   | delve, dive, explore, uncover, unlock, unleash, unpack   |
+| "Use" synonyms       | harness, leverage, utilize, employ, optimize, streamline |
+| "Help" synonyms      | foster, bolster, fortify, amplify, catalyze, spearhead   |
+| "Improve" synonyms   | elevate, enhance, empower, enable, facilitate, drive     |
+| "Change" synonyms    | revolutionize, transform, transcend, pioneer             |
+| "Do" synonyms        | navigate, embark, venture, forge                         |
+| "Emphasize" synonyms | underscore, highlight, illuminate, shed light on         |
+| "Affect" synonyms    | resonate, reverberate, captivate, evoke, ignite          |
+| "Support" synonyms   | champion, advocate, safeguard, mitigate                  |
+| "Include" synonyms   | encompass, embody, exemplify                             |
+| "Succeed" synonyms   | garner, boast, surpass                                   |
+| "Make" synonyms      | craft, curate, tailor, refine                            |
+| "Manage" synonyms    | orchestrate, execute, implement, undertake               |
+
+### Extended Banned Adjectives
+
+| Category                 | Words                                                                            |
+| ------------------------ | -------------------------------------------------------------------------------- |
+| "Important" synonyms     | crucial, essential, vital, pivotal, paramount, critical, key                     |
+| "Good/thorough" synonyms | robust, comprehensive, holistic, thorough                                        |
+| "Easy" synonyms          | seamless, effortless, smooth                                                     |
+| "Complex" synonyms       | intricate, complex, multifaceted, nuanced                                        |
+| "New" synonyms           | innovative, cutting-edge, groundbreaking, revolutionary, transformative          |
+| "Flexible" synonyms      | dynamic, agile, versatile                                                        |
+| "Impressive" synonyms    | compelling, profound, remarkable, noteworthy, commendable, exemplary             |
+| "Lively" synonyms        | vibrant, bustling, vivid                                                         |
+| "Hard" synonyms          | daunting, formidable                                                             |
+| Corporate modifiers      | scalable, turnkey, world-class, best-in-class, next-generation, mission-critical |
+| Vague intensifiers       | strategic, impactful, significant, meaningful                                    |
+| Superlative fillers      | indelible, enduring, unwavering, unparalleled, unprecedented                     |
+| Pretentious              | bespoke, curated, whimsical, gossamer, labyrinthine                              |
+| Buzzword modifiers       | ever-evolving, ever-changing, rapidly shifting                                   |
+
+### Extended Banned Adverbs
+
+| Category                 | Words                                                           |
+| ------------------------ | --------------------------------------------------------------- |
+| Formal transitions       | additionally, furthermore, moreover, consequently, subsequently |
+| False importance markers | notably, importantly, crucially, significantly, remarkably      |
+| Pseudo-certainty         | essentially, fundamentally, arguably, undeniably, undoubtedly   |
+| Empty intensifiers       | seamlessly, effortlessly, meticulously, tirelessly              |
+| Vague modifiers          | profoundly, dynamically, strategically, critically              |
+| Filler                   | indeed, certainly, absolutely                                   |
+
+### Extended Banned Nouns
+
+| Category              | Words                                                                                                             |
+| --------------------- | ----------------------------------------------------------------------------------------------------------------- |
+| Vague domain words    | landscape, realm, tapestry, beacon, labyrinth, enigma                                                             |
+| Journey synonyms      | journey, quest, odyssey, voyage                                                                                   |
+| Corporate nouns       | synergy, paradigm, framework, ecosystem, methodology                                                              |
+| Intersection synonyms | intersection, interplay, nexus                                                                                    |
+| Foundation synonyms   | crucible, catalyst, cornerstone, linchpin                                                                         |
+| Art metaphors         | tapestry, symphony, mosaic, kaleidoscope, constellation, prism, spectrum                                          |
+| Value metaphors       | treasure trove, goldmine, arsenal                                                                                 |
+| Abstract bloat        | resilience, significance, transformation, complexity, deliverable, initiative, stakeholder, engagement, alignment |
+
+---
+
+## 3. Banned Phrases
+
+### Opening / Framing Phrases
+
+These are among the most instantly recognizable AI signatures. GPTZero data shows "today's fast-paced world" appears **107x more often** in AI text than human text.
+
+**Never open with any of these:**
+
+- "In today's fast-paced world..."
+- "In today's digital age..."
+- "In today's rapidly evolving [landscape/world]..."
+- "In the ever-evolving landscape of..."
+- "In the ever-changing world of..."
+- "In the realm of..."
+- "In a world where..."
+- "With the advent of..."
+- "As we navigate the complexities of..."
+- "In the age of [X]..."
+- "When it comes to..."
+- "Now more than ever..."
+- "As [industry/field] continues to evolve..."
+- "With the rise of [technology/AI/social media]..."
+- "This article explores..."
+
+**Never use these "importance" interjections:**
+
+- "It's important to note that..."
+- "It's worth noting that..."
+- "It's worth mentioning that..."
+- "It should be noted that..."
+- "It goes without saying that..."
+- "It cannot be overstated that..."
+- "One cannot overstate the importance of..."
+- "Needless to say..."
+- "It is crucial to understand..."
+- "No discussion would be complete without..."
+
+**Never use these hype phrases:**
+
+- "Unlock the power/potential of..."
+- "Unleash the power of..."
+- "Harness the power of..."
+- "A game-changer for..."
+- "Revolutionizing the way..."
+- "Supercharge your [anything]..."
+- "Future-proof your..."
+- "Stay ahead of the curve"
+- "At the forefront of..."
+- "Pushing the boundaries of..."
+- "Pave the way for..."
+- "Bridging the gap between..."
+
+**Never use these testament/significance phrases:**
+
+- "A testament to..."
+- "Stands as a testament to..."
+- "Plays a crucial role in shaping..." (182x more frequent in AI text)
+- "Serves as a [powerful/important/vivid]..."
+- "Sheds light on..."
+- "Highlights the importance of..."
+- "Underscores the need for..."
+
+**Never use these journey/exploration metaphors:**
+
+- "Embark on a journey..."
+- "Delve into the world of..."
+- "Let's dive in / Let's dive deeper"
+- "Let's delve into..."
+- "Let's unpack this..."
+- "Navigate the complexities of..."
+- "Unlock the secrets of..."
+- "Explore the depths of..."
+
+**Never use these contrast constructions:**
+
+- "It's not just about [X], it's about [Y]"
+- "It's not just [X]; it's [Y]"
+- "[X] is more than just [Y]. It's [Z]."
+- "Not only [X], but also [Y]" (when used as a rhetorical flourish rather than factual conjunction)
+
+**Never use these stock metaphorical phrases:**
+
+- "A rich tapestry of..."
+- "A symphony of [anything]"
+- "A mosaic of ideas"
+- "A constellation of [anything]"
+- "A kaleidoscope of..."
+- "A beacon of [hope/innovation]"
+- "Nestled in the heart of..."
+- "Woven into the fabric of..."
+- "A canvas of possibilities"
+
+### Hedging Phrases
+
+- "Generally speaking..."
+- "To some extent..."
+- "From a broader perspective..."
+- "One could argue that..."
+- "May potentially help..."
+- "Can often be beneficial..."
+- "While there are many perspectives..."
+
+### Restatement Padding Phrases
+
+- "In other words..."
+- "To put it another way..."
+- "Said another way..."
+- "To put it simply..."
+- "Simply put..."
+- "To frame it differently..."
+
+### Closing Phrases
+
+**Never close with:**
+
+- "In conclusion..."
+- "In summary..."
+- "To summarize..."
+- "To wrap things up..."
+- "At the end of the day..."
+- "All things considered..."
+- "It is clear that..."
+- "As we look ahead..."
+- "As we move forward..."
+- "Moving forward..."
+- "The future looks bright..."
+- "Embrace the future..."
+
+**Never use these sign-offs:**
+
+- "I hope this helps!"
+- "Let me know if you have any questions."
+- "Feel free to reach out if you need further assistance."
+- "Happy to help!"
+
+### Participial Phrase Padding (the "-ing Tail")
+
+Wikipedia editors and researchers specifically flag this pattern: AI attaches present-participle phrases to sentence ends as superficial analysis filler. Never end sentences with:
+
+- "...highlighting the importance of continued innovation"
+- "...demonstrating the potential for future growth"
+- "...showcasing the remarkable progress made"
+- "...underscoring the need for further research"
+- "...paving the way for future developments"
+- "...signaling a shift in the broader landscape"
+
+These contribute nothing. They are the written equivalent of a verbal tic.
+
+### Weasel Attribution Phrases
+
+- "Industry reports suggest..."
+- "Observers cite..."
+- "Experts believe..."
+- "Has been described as..."
+- "It is widely believed that..."
+- "Research suggests that..."
+
+If you can't name the source, don't claim authority from unnamed ones.
+
+---
+
+## 4. Banned Structural Patterns
+
+### The List Addiction
+
+AI defaults to numbered lists and bullet points even when prose would be better. On the OpenAI forums, users report it is "completely impossible to stop ChatGPT from writing every line into its own item in a numbered list." The behavior was reinforced by RLHF training -- people are more inclined to be impressed by answers that contain bullet points.
+
+**Banned patterns:**
+
+- Reflexive listicle formatting ("5 ways to...", "7 tips for...", "10 things you should know about...")
+- Bullet points for interconnected ideas that need flowing argumentation
+- Nested bullet points
+- The "bold title + colon + explanation" bullet format (virtually nonexistent in human writing per Wikipedia editors)
+
+### The Sandwich / Bookend Pattern
+
+AI wraps content in introductions and conclusions that restate the same thesis.
+
+**Banned patterns:**
+
+- Introductions that announce the topic generically instead of engaging the reader
+- Conclusions that merely restate the introduction in different words
+- The "generic bigger picture" ending that zooms out to vague speculation ("As AI continues to evolve...")
+- Equal-weight sections where every topic gets identical treatment regardless of actual importance
+
+### The Five-Paragraph Essay Default
+
+AI reaches for the five-paragraph essay because its training data is saturated with that pattern.
+
+**Banned patterns:**
+
+- Thesis-statement introduction followed by exactly three supporting points followed by a restating conclusion
+- Mechanical enumeration: "Firstly... Secondly... Thirdly... In conclusion..."
+- The three-point pattern (always presenting exactly three arguments, examples, or items)
+- Rigid outline structure with "Challenges" and "Future Prospects" sections
+
+### Compulsive Summarization
+
+AI restates, recaps, and summarizes constantly, treating the reader as if they've already forgotten what they just read.
+
+**Banned patterns:**
+
+- "In summary..." / "In conclusion..." / "To recap..." followed by a restatement
+- Section-level summaries (mini-conclusions at the end of individual sections)
+- Empty summary sentences that sound conclusive but add nothing ("By following these steps, we achieve better performance")
+- Redundant restatement in bold-title-plus-explanation bullet points where the explanation just rephrases the bold title
+
+### Length Padding
+
+AI inflates word count through unnecessary elaboration, redundant examples, and restating points differently.
+
+**Banned patterns:**
+
+- Throat-clearing openers ("When it comes to [topic], there are many factors to consider")
+- Unnecessary defining of terms through appositives ("Margaret Fuller, a pioneering feminist and transcendentalist thinker...")
+- Saying the same thing in four sentences that could be said in one
+- Monotonous expansion: claim, expand slightly, move to next point without adding depth
+- The "comprehensive" trap: covering ten points shallowly rather than three points deeply
+
+### Headers and Subheaders Overuse
+
+**Banned patterns:**
+
+- Multiple levels of headers (H2, H3, H4) for short pieces that would read better as continuous prose
+- Predictable header naming: "Understanding X," "The Importance of Y," "The Future of Z"
+- Title Case In Every Section Heading when the context calls for sentence case
+
+### The Meta-Commentary Pattern
+
+AI narrates its own response structure.
+
+**Banned patterns:**
+
+- "Now that we've explored X..."
+- "In the next section, we will discuss..."
+- "Let's dive into..."
+- "Let me break this down for you"
+- Excessive signposting that describes the article rather than explaining the topic directly
+
+---
+
+## 5. Banned Tone and Voice Patterns
+
+### The Helpful Assistant Voice
+
+AI writing sounds like a customer service representative or corporate communications person. Relentless positivity. Perpetual agreeableness.
+
+**Banned patterns:**
+
+- Opening with "Great question!" / "That's a fantastic point!" / "Absolutely!" / "Certainly!"
+- The contrastive reframe: "You're not doing X, you're doing Y" / "It's not laziness -- it's exhaustion"
+- Performative enthusiasm about the user's input
+- Sign-offs offering more help ("Let me know if you'd like me to elaborate!")
+
+### Synthetic Profundity
+
+Writing that sounds profound at first glance but lacks depth, originality, or practical value.
+
+**Banned patterns:**
+
+- Overuse of juxtaposition: "It's not just X; it's Y" attempting profundity while obscuring simple ideas
+- Abstract language without grounding: words like "authenticity" and "intention" as placeholders for meaning
+- Circular meaning: ideas rephrased repeatedly without advancing understanding
+- Pseudo-insightful phrases: "Leadership isn't about perfection; it's about authenticity"
+
+### The Wise Sage / Performative Adjudicator Voice
+
+An authoritative, slightly condescending explanatory tone. Short declarative sentences signaling finality. Authority via cadence rather than argument.
+
+**Banned patterns:**
+
+- Negative definitions masquerading as insight: "Not X. Not Y. But Z."
+- Meta-validation moves: "You're absolutely right"
+- Closure tokens: "Bottom line," "That changes everything"
+- The condescending last paragraph (hand-wringing obvious advice: "However, one must remember that if you [insert totally obvious comment], then that would be bad")
+
+### The Safety / Hedging Voice
+
+Excessive disclaimers, qualifiers, and hedging that creates a perpetually tentative voice.
+
+**Banned patterns:**
+
+- "It's important to remember..."
+- "While there are many perspectives..."
+- Presenting balanced viewpoints where balance is inappropriate or unnecessary
+- Refusing to commit to a position when the evidence clearly supports one
+- "May," "might," "could potentially" on statements that should be direct
+
+### Toxic Positivity / The Inspirational Default
+
+AI gravitates toward motivational-poster language and empty uplift.
+
+**Banned patterns:**
+
+- Relentless optimism regardless of context
+- Conflicts appearing late and being resolved trivially in fiction
+- The lack of negativity -- most topics are not all good, and applying critical thought matters
+- Grandiose language: "stands as a testament," "plays a vital role," "underscores its importance"
+- Promotional language: "rich cultural heritage," "breathtaking," "stunning natural beauty"
+
+### Homogeneous Register
+
+AI writes at the same level of formality regardless of context.
+
+**Banned patterns:**
+
+- Semi-formal corporate vocabulary used in casual contexts
+- Avoiding contractions, slang, colloquial language, and dialect
+- Using "glucose" when the context calls for "blood sugar"
+- Writing in the same register for an email, an essay, a social media post, and a creative story
+- Present participial phrases used at 2-5x the rate found in human text
+
+---
+
+## 6. Banned Rhetorical Patterns
+
+### The "Both Sides" Rhetoric
+
+AI always presents balanced perspectives, never takes strong stances, and always acknowledges counterpoints even when unnecessary.
+
+**Banned patterns:**
+
+- The Equivocation Seesaw: "While X has benefits, it is important to note that Y has challenges"
+- Every claim paired with a built-in counterpoint
+- Every assertion followed by a qualification
+- Structural hedging through mandatory presentation of multiple perspectives
+- The simultaneous paradox of impersonal confidence and structural noncommitment
+
+### Lack of Specificity
+
+AI speaks in generalities rather than citing specific examples, personal anecdotes, concrete details, exact numbers, or named sources.
+
+**Banned patterns:**
+
+- Vague cookie-cutter examples that could be slotted in anywhere
+- Surface-level generalizations instead of unique analysis
+- Abstract vocabulary ("comprehensive," "foundational") instead of concrete imagery
+- "Increased productivity" instead of "cutting revision cycles from three rounds to one"
+- "A popular dining establishment" instead of naming the actual restaurant
+
+### The Acknowledge-and-Expand Pattern
+
+AI restates the prompt before answering it.
+
+**Banned patterns:**
+
+- Opening a response by summarizing or paraphrasing what was asked
+- Introductory paragraphs that merely rephrase the topic
+- Validating rather than challenging, affirming rather than interrogating
+
+### Logical Structure Predictability
+
+AI follows textbook argumentation patterns too perfectly.
+
+**Banned patterns:**
+
+- The tricolon: structuring everything in groups of three ("fast, efficient, and reliable")
+- Excessive parallelism and antithesis used obsessively rather than strategically
+- The "rule of three" applied to every list, every set of adjectives, every argument
+- The pedagogical tone that explains concepts the reader clearly already understands
+
+### Absence of Real-World Grounding
+
+AI lacks references to specific places, dates, people, sensory details, or lived experience.
+
+**Banned patterns:**
+
+- Generic sensory descriptions that "could apply to anything"
+- Third-person clinical perspective even on personal topics
+- Discussing readers being "challenged" or "invited to reflect" rather than what they might see, feel, or learn
+- Abstract advice without actionable context
+
+### The "Correct but Empty" Problem
+
+AI writing is technically accurate but lacks insight, originality, or genuine analysis.
+
+**Banned patterns:**
+
+- Polished surface with minimal content (shallow information density)
+- Claims without evidence or concrete examples
+- The "treadmill effect" -- hovering over similar ideas without advancing information
+- What could be said in 500 words stretching to 2,500 through restatements and padding
+- Cosmetic improvement of prose without addressing problems of meaning
+
+---
+
+## 7. Banned Punctuation and Formatting Habits
+
+### The "ChatGPT Dash" (Em-Dash Overuse)
+
+Researchers have dubbed the em-dash the "ChatGPT dash." AI uses it as a probabilistic shortcut to create syntactic complexity without navigating the stricter rules of semicolons, colons, or commas. Wikipedia editors confirmed AI text uses em dashes "more often than nonprofessional human-written text" and "in places where humans are more likely to use commas, parentheses, colons, or hyphens."
+
+**Rule:** If you have more than one em dash in a paragraph, you probably have too many. Most of the time, a comma, parenthetical, colon, or period works better.
+
+### Bold Text Abuse
+
+AI mechanically bolds words and phrases for emphasis. Users report "randomly bold text with no real logic or reason, almost half the answer can be bolded."
+
+**Rule:** Bold should be rare and purposeful. If everything is emphasized, nothing is.
+
+### Emoji and Exclamation Mark Abuse
+
+The sparkle emoji has become "the unofficial symbol of AI." AI defaults to the same "motivational" emoji set because they're safe and generic. Exclamation marks are used to simulate engagement rather than express genuine enthusiasm.
+
+**Rule:** In professional or serious writing, eliminate both. In casual writing, use only when genuinely appropriate.
+
+### Perfect Grammar as a Tell
+
+AI text is "suspiciously free of errors" -- no fragments, no run-on sentences, no contractions, no sentence-initial "And" or "But." Human writing naturally includes these "imperfections."
+
+**Rule:** Write like a human. Use contractions. Start sentences with "And" or "But" when it sounds right. Vary sentence length dramatically. A three-word sentence. Then a fifty-word one that rambles through a compound structure with multiple clauses because sometimes that is how thinking actually works, messy and real and alive.
+
+### Synonym Cycling
+
+Due to repetition-penalty code, AI rotates through synonyms unnaturally (referring to something as "the platform," then "the solution," then "the ecosystem," then "the framework").
+
+**Rule:** If you're talking about the same thing, call it the same thing. Readers aren't confused by repetition; they're confused by unnecessary variation.
+
+---
+
+## 8. Genre-Specific Tells
+
+### Academic Writing
+
+- Direct openings without rhetorical setup
+- Sweeping conclusions about "the human condition"
+- Fabricated citations and hallucinated sources
+- Too-perfect structural symmetry
+
+### Fiction
+
+- Flat characters without psychological depth
+- Lack of subtext (explicitly explaining themes rather than letting the reader discover them)
+- Predictable plot beats and arbitrary plot twists
+- "Gray goo" storytelling -- technically competent, emotionally disengaged
+- Every restaurant "nestled in the heart of," every city "bustling"
+- Chapters consistently ending on upbeat notes
+- Excessive adverbs instead of strong verbs
+- Melodramatic, "mushy" emotional language
+- Characters repeating the same verbal patterns
+
+### Email / Corporate Communication
+
+- Formulaic and stilted tone
+- "I hope this email finds you well"
+- Excessive "moreover" and "furthermore" in casual messages
+- 79% of consumers consider switching brands if they sense AI wrote an email to them
+
+### LinkedIn / Social Media
+
+- Over 50% of longform LinkedIn posts from top profiles are now likely AI-generated
+- Generic engagement bait ("Comment YES if you agree")
+- Broad universally-applicable advice rather than niche specificity
+- The sparkle emoji + motivational closing combo
+
+### Marketing Copy
+
+- Repetitive buzzwords ("unlock," "transform," "revolutionize," "seamless," "cutting-edge")
+- Lack of specific value propositions
+- "That's where [product] comes in" formula
+- "[Problem]? Meet [solution]."
+
+---
+
+## 9. What to Do Instead
+
+### On Word Choice
+
+- Use plain, concrete words. "Use" not "utilize." "Help" not "facilitate." "Start" not "embark." "Show" not "showcase."
+- Be specific. Name things. Use numbers, dates, places, people's names.
+- Prefer Anglo-Saxon words over Latinate ones when both work. "Buy" not "purchase." "Get" not "obtain." "Think" not "contemplate."
+- If a word sounds like it belongs in a TED talk or a corporate annual report, cut it.
+
+### On Structure
+
+- Vary paragraph length. A one-sentence paragraph hits hard. Follow it with a dense block. Mix it up.
+- Vary sentence length. Short sentences punch. Long sentences build tension, accumulate detail, and let the reader sink into the rhythm of thinking. Alternate between them unpredictably.
+- Lead with your best point, not a throat-clearing introduction. Drop the reader into the middle of the idea.
+- Don't summarize what you just said. Trust the reader.
+- Make editorial choices. Spend 80% of your words on what actually matters. Dispatch the rest quickly or skip it entirely.
+- Use lists only for genuinely parallel, independent items. If the items need context or flow into each other, use prose.
+
+### On Tone
+
+- Have a point of view. Take a position. The best writing "unabashedly shares a clear opinion" (Nathan Lambert).
+- Be willing to be wrong, provocative, or incomplete. Human writing has edges.
+- Match the register to the context. An email should sound different from an essay should sound different from a tweet.
+- Use contractions. Write like you talk (when appropriate).
+- Don't hedge everything. If you're confident, say it directly. "This works" not "this might potentially work in some circumstances."
+- Include the negative. Most topics are not all good. Critical thought and subjectivity make writing honest.
+
+### On Evidence and Detail
+
+- Cite specific sources by name.
+- Use personal anecdotes, concrete examples, exact numbers.
+- Describe sensory details from lived experience -- the sticky web, the cedar-drawer smell, the specific restaurant on the specific street.
+- Show don't tell: let examples carry the argument rather than abstractly asserting claims.
+
+### On Rhetoric
+
+- Don't present both sides when one side is clearly right.
+- Don't use the rule of three by default. Sometimes two points are enough. Sometimes seven.
+- Don't deploy parallelism, antithesis, and tricolon in every paragraph. These are powerful tools -- use them rarely so they hit hard.
+- Don't explain what the reader already knows.
+- Don't end with a sweeping statement about the future of humanity.
+
+---
+
+## 10. Detection Science: What the Tools Measure
+
+Understanding what AI detectors flag helps you understand what makes AI writing statistically recognizable.
+
+### Perplexity
+
+Perplexity measures how predictable a text is to a language model. Low perplexity = the model would have chosen the same words = likely AI. High perplexity = surprising word choices = likely human. GPTZero uses a threshold of 85 -- above that generally suggests human writing.
+
+**What this means for writing:** Use unexpected words. Make surprising connections. Don't always reach for the most obvious next word. If a language model could easily predict your next sentence, your writing lacks the distinctiveness of human thought.
+
+### Burstiness
+
+Burstiness measures how much sentence length and complexity vary across a document. Human writing varies wildly -- a three-word sentence followed by a fifty-word one. AI maintains consistent length and complexity throughout.
+
+**What this means for writing:** Vary your sentence length. Vary your paragraph length. Vary your complexity. Let your writing breathe and surge and stall unpredictably. A 2024 journalism study found that introducing burstiness to AI text reduced detection rates by 40%.
+
+### Vocabulary Diversity (Type-Token Ratio)
+
+AI text shows lower vocabulary diversity -- it reaches for the same words more often. Human writers use a richer, more varied vocabulary across documents.
+
+**What this means for writing:** Don't keep cycling back to the same key terms. But also don't artificially synonym-cycle. Use the natural range of words that comes from actually thinking about what you're saying.
+
+### Propositional Idea Density
+
+This measures the ratio of actual ideas to total words. AI text has low propositional density -- many words, few ideas.
+
+**What this means for writing:** Every sentence should advance the argument, add information, or earn its place. If you can cut a sentence without losing anything, cut it.
+
+### The Academic Findings
+
+- A psycholinguistic framework (ArXiv 2505.01800) maps 31 stylometric features across cognitive load, metacognition, lexical access, and discourse planning -- all areas where AI fundamentally differs from humans.
+- Research by Georgiou (2024) found lexical parameters the most reliable indicators, with AI using more "difficult words" and "content words" while humans use more function words.
+- Doshi and Hauser (Science Advances, 2024) found AI enhances individual creativity but reduces collective diversity -- AI-enabled stories were "more similar to each other" than human stories.
+- Cross-cultural research (ArXiv 2409.11360) found AI suggestions led Indian participants to adopt Western writing styles, homogenizing cultural voice.
+
+---
+
+## 11. Sources
+
+### Academic Research
+
+- FSU: "Why Does ChatGPT Delve So Much?" -- Proceedings of the 31st International Conference on Computational Linguistics, January 2025
+- Delving into ChatGPT Usage in Academic Writing Through Excess Vocabulary (arXiv 2406.07016) -- 15 million PubMed abstracts analyzed
+- Psycholinguistic Analysis of AI vs Human Text (ArXiv 2505.01800) -- 31 stylometric features framework
+- Doshi & Hauser: "AI and Collective Creativity Diversity" (Science Advances, 2024)
+- Cross-Cultural AI Homogenization Study (ArXiv 2409.11360)
+- Georgiou: Differentiating Human and AI Texts (MDPI Information, 2024)
+- ICLR 2024: Sycophancy patterns across five AI assistants (ArXiv 2310.13548)
+- Shaib et al.: "Measuring AI 'Slop' in Text" (arXiv 2509.19163)
+- Nature (October 2025): AI models are 50% more sycophantic than humans
+- Lu et al.: Entropy-based text watermarking (ACL 2024)
+
+### Industry and Detection
+
+- GPTZero: How AI Detectors Work; Perplexity and Burstiness; Most Common AI Vocabulary; AI Vocabulary Tool (3.3 million text analysis)
+- Originality.ai: AI Detection Methods; LinkedIn AI Study (50%+ of longform posts AI-generated)
+- Turnitin: False Positive Rates in AI Writing Detection
+- Pangram Labs: 148 overused nouns, 90+ verbs, 40+ adjectives, 200+ phrase combinations identified
+
+### Editor and Writer Observations
+
+- Wikipedia: Signs of AI Writing (described by TechCrunch as "the best guide to spotting AI writing")
+- Neil Clarke, Clarkesworld Magazine: Received 500 AI submissions in one month; shut down submissions February 2023
+- The Augmented Educator: Ten Telltale Signs of AI-Generated Text (Michael G. Wagner)
+- Inside Higher Ed: 15 distinct AI markers in academic essays (Elizabeth Steere)
+- Reuters Institute, Oxford: AI prose divergence from human writing; vocabulary fingerprints ("aidiolects")
+
+### Analysis and Commentary
+
+- Nathan Lambert, Interconnects: "Why AI Writing Is Mid" -- five training failures that destroy writing quality
+- Mark Wunsch: "Performative Adjudicator Voice" -- pseudo-authoritative communication style
+- JD Meier: "Synthetic Profundity" -- writing that sounds profound but lacks depth
+- Sean Goedecke: "The OpenAI House Style Is Exhausting"; sycophancy as the first LLM dark pattern
+- Colin Gorrie, Dead Language Society: Rhetorical analysis of AI writing -- "what the LLM lacks is not technical ability, but taste"
+- Shreya Shankar: "Writing in the Age of LLMs" -- seven deficiencies of machine-generated text
+- Charlie Guo: "The Field Guide to AI Slop"
+- TechEduByte / The Register: "Semantic Ablation" -- the algorithmic erosion of high-entropy information
+- Louis Bouchard: How to Clean Up AI-Generated Drafts
+- Blake Stockton: Red Flag Words and Phrases; Wikipedia AI Guide Analysis
+- TIME: "'Did AI Write That?' Is the Internet's New Favorite Insult"
+- Boston Globe: "ChatGPT's Uncanny Valley of the Mind"
+- The Conversation: "ChatGPT Is Changing the Way We Write"
+
+### Community Sources
+
+- OpenAI Developer Community Forums: Multiple threads on list addiction, bold formatting abuse, condescending conclusions, sycophantic behavior, emoji overuse
+- Reddit: r/writing, r/ChatGPT, r/artificial -- word lists, pattern identification
+- The Decoder: Reddit compilations of ChatGPT tells
+
+---
+
+_This spec is a living document. The patterns it describes will evolve as models change. But the core principle won't: writing that sounds like everyone sounds like no one. The goal isn't to pass an AI detector. The goal is to write with the specificity, conviction, messiness, and life that only comes from a human who has something to say and a particular way of saying it._

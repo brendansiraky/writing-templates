@@ -1,0 +1,251 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "writing-style.schema.json",
+  "title": "Writing Style Specification",
+  "description": "A JSON spec precise enough that an LLM can produce writing that faithfully matches the described style. Uses prescriptive rules as the primary mechanism, supplemented by exemplar passages that demonstrate all rules operating simultaneously.",
+  "type": "object",
+  "required": ["id", "name", "one_liner", "meta", "spec"],
+  "additionalProperties": false,
+  "properties": {
+    "id": {
+      "type": "string",
+      "pattern": "^[a-z0-9]+(-[a-z0-9]+)*$",
+      "description": "Machine-readable kebab-case slug."
+    },
+    "name": {
+      "type": "string",
+      "minLength": 1,
+      "description": "Human-readable display name."
+    },
+    "one_liner": {
+      "type": "string",
+      "minLength": 1,
+      "description": "One sentence capturing what it feels like to *read* this style."
+    },
+    "meta": {
+      "type": "object",
+      "required": [
+        "style_tags",
+        "mood",
+        "energy",
+        "density",
+        "formality",
+        "warmth",
+        "vocabulary_level",
+        "best_for",
+        "avoid_for"
+      ],
+      "additionalProperties": false,
+      "properties": {
+        "style_tags": {
+          "type": "array",
+          "items": { "type": "string" },
+          "minItems": 3,
+          "maxItems": 6,
+          "description": "Genre/texture labels (e.g., 'Narrative', 'Conversational', 'Warm')."
+        },
+        "mood": {
+          "type": "array",
+          "items": { "type": "string" },
+          "minItems": 2,
+          "maxItems": 4,
+          "description": "Emotional atmosphere while reading (e.g., 'Inviting', 'Curious')."
+        },
+        "energy": {
+          "type": "string",
+          "enum": ["low", "medium", "high"],
+          "description": "Kinetic quality — does the prose push you forward or let you come to it?"
+        },
+        "density": {
+          "type": "string",
+          "enum": ["sparse", "moderate", "dense"],
+          "description": "Information per sentence."
+        },
+        "formality": {
+          "type": "string",
+          "enum": ["low", "medium", "high"],
+          "description": "Casual conversation to academic journal."
+        },
+        "warmth": {
+          "type": "string",
+          "enum": ["cold", "cool", "warm", "hot"],
+          "description": "Interpersonal temperature — how much the writer acknowledges the reader."
+        },
+        "vocabulary_level": {
+          "type": "string",
+          "enum": ["basic", "intermediate", "advanced", "specialist"],
+          "description": "Assumed reading level."
+        },
+        "best_for": {
+          "type": "array",
+          "items": { "type": "string" },
+          "minItems": 1,
+          "description": "Content types where this style excels."
+        },
+        "avoid_for": {
+          "type": "array",
+          "items": { "type": "string" },
+          "minItems": 1,
+          "description": "Content types where this style would be wrong."
+        }
+      }
+    },
+    "spec": {
+      "type": "object",
+      "required": [
+        "vocabulary_and_diction",
+        "sentence_construction",
+        "rhythm_and_cadence",
+        "paragraph_architecture",
+        "opening_patterns",
+        "closing_patterns",
+        "transitions_and_connectives",
+        "pacing_and_information_flow",
+        "overall_voice",
+        "emotional_register",
+        "humor_and_personality",
+        "rhetorical_devices",
+        "use_of_evidence_and_examples",
+        "point_of_view_and_person",
+        "punctuation_and_mechanics",
+        "formatting_and_structure",
+        "contextual_registers",
+        "characteristic_constructions",
+        "influences_and_reference_points",
+        "anti_patterns",
+        "exemplar_passages"
+      ],
+      "additionalProperties": false,
+      "properties": {
+        "vocabulary_and_diction": {
+          "type": "string",
+          "minLength": 1,
+          "description": "Vocabulary level, Germanic vs. Latinate preference, concreteness, jargon policy, banned words/phrases."
+        },
+        "sentence_construction": {
+          "type": "string",
+          "minLength": 1,
+          "description": "Length, variation patterns, clause ordering, subordination vs. coordination, parallelism."
+        },
+        "rhythm_and_cadence": {
+          "type": "string",
+          "minLength": 1,
+          "description": "Sound, stress patterns, tempo, read-aloud quality. About music, not grammar."
+        },
+        "paragraph_architecture": {
+          "type": "string",
+          "minLength": 1,
+          "description": "Length, internal structure, opening/closing conventions, idea sequencing."
+        },
+        "opening_patterns": {
+          "type": "object",
+          "required": ["articles", "sections", "paragraphs"],
+          "additionalProperties": false,
+          "description": "How pieces and sections begin — disproportionately shapes reader perception.",
+          "properties": {
+            "articles": {
+              "type": "string",
+              "minLength": 1,
+              "description": "How full pieces/articles open."
+            },
+            "sections": {
+              "type": "string",
+              "minLength": 1,
+              "description": "How new sections within a piece open."
+            },
+            "paragraphs": {
+              "type": "string",
+              "minLength": 1,
+              "description": "How individual paragraphs open."
+            }
+          }
+        },
+        "closing_patterns": {
+          "type": "string",
+          "minLength": 1,
+          "description": "How pieces end — final paragraphs and sentences."
+        },
+        "transitions_and_connectives": {
+          "type": "string",
+          "minLength": 1,
+          "description": "How ideas connect across paragraphs — implicit vs. explicit, which connectives are used/avoided."
+        },
+        "pacing_and_information_flow": {
+          "type": "string",
+          "minLength": 1,
+          "description": "Arc of a whole piece: progressive disclosure, front-loading, cognitive load management."
+        },
+        "overall_voice": {
+          "type": "string",
+          "minLength": 1,
+          "description": "The gestalt — what it feels like to read a full page."
+        },
+        "emotional_register": {
+          "type": "string",
+          "minLength": 1,
+          "description": "What emotions are permitted, how they're expressed, what's off-limits."
+        },
+        "humor_and_personality": {
+          "type": "string",
+          "minLength": 1,
+          "description": "If/when/how humor and idiosyncrasy appear — critical for anti-AI distinctiveness."
+        },
+        "rhetorical_devices": {
+          "type": "string",
+          "minLength": 1,
+          "description": "Which figures are used (tricolon, litotes, anaphora, analogy), frequency, which are forbidden."
+        },
+        "use_of_evidence_and_examples": {
+          "type": "string",
+          "minLength": 1,
+          "description": "How claims are supported — specificity standards, example length, data presentation."
+        },
+        "point_of_view_and_person": {
+          "type": "string",
+          "minLength": 1,
+          "description": "Grammatical person, narrator stance, self-reference rules, distance from reader."
+        },
+        "punctuation_and_mechanics": {
+          "type": "string",
+          "minLength": 1,
+          "description": "Em-dashes, semicolons, Oxford comma, exclamation marks — strong style discriminators."
+        },
+        "formatting_and_structure": {
+          "type": "string",
+          "minLength": 1,
+          "description": "Headings, lists, bold/italic, code formatting, block quotes, visual presentation."
+        },
+        "contextual_registers": {
+          "type": "object",
+          "minProperties": 1,
+          "additionalProperties": { "type": "string" },
+          "description": "How style adapts to different contexts (headlines, body, captions, summaries) — the responsive behavior of writing."
+        },
+        "characteristic_constructions": {
+          "type": "array",
+          "items": { "type": "string" },
+          "minItems": 1,
+          "description": "Named signature patterns — reusable syntactic recipes that fingerprint the style."
+        },
+        "influences_and_reference_points": {
+          "type": "string",
+          "minLength": 1,
+          "description": "Named writers/publications as exemplars, with notes on which aspects to draw from — leverages LLM training data."
+        },
+        "anti_patterns": {
+          "type": "array",
+          "items": { "type": "string" },
+          "minItems": 1,
+          "description": "Hard prohibitions — 'must NOT' list. Includes AI-typical patterns to avoid."
+        },
+        "exemplar_passages": {
+          "type": "array",
+          "items": { "type": "string" },
+          "minItems": 2,
+          "maxItems": 3,
+          "description": "2-3 short passages (~150-200 words each) demonstrating the style at its best. Rules define constraints; exemplars show the gestalt."
+        }
+      }
+    }
+  }
+}
